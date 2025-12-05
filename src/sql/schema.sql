@@ -1,7 +1,7 @@
 CREATE TABLE Product (
-id SERIAL PRIMARY KEY,
+id SERIAL PRIMARY KEY ,
 name VARCHAR (100),
-price NUMBER ,
+price FLOAT ,
 creation_datetime TIMESTAMP
 );
 
