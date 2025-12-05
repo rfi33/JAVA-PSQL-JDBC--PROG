@@ -8,7 +8,11 @@ postgres=# \password product_management_user
 Enter new password for user "product_management_user": 123456
 Enter it again: 123456
 
-OR
+\q
+psql -U product_management_db -d product_management_db -h localhost
+
+
+
 
 CREATE USER product_management_user WITH
 NOSUPERUSER
@@ -17,6 +21,7 @@ ENCRYPTED
 NOCREATEROLE
 PASSWORD '123456';
 
+\q
 psql -U product_management_db -d product_management_db -h localhost
 
 
