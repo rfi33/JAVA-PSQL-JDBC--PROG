@@ -3,10 +3,10 @@ package ProductManagement.com;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class ProductManagement {
+public class DBConnection {
     public static void main(String[] args) {
     String url = "jdbc:postgresql://localhost:5432/product_management_db";
-    String username = "product_manager_user";
+    String username = "prodguct_manager_user";
     String password = "123456";
         try {
             Connection connect = DriverManager.getConnection(url,username,password);
