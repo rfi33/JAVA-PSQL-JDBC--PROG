@@ -3,14 +3,13 @@ package ProductManagement.com;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         DataRetriever dataRetriever = new DataRetriever();
         testGetAllCategories(dataRetriever);
-        Main.testGetProductList(dataRetriever);
+        testGetProductList(dataRetriever);
         testGetProductsByCriteria(dataRetriever);
         testGetProductsByCriteria2(dataRetriever);
     }

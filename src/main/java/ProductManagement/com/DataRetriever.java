@@ -9,18 +9,6 @@ import java.util.Locale;
 public class DataRetriever {
     private DBConnection dbConnection;
 
-    public void setDbConnection(DBConnection dbConnection) {
-        this.dbConnection = dbConnection;
-    }
-
-    public DBConnection getDbConnection() {
-        return dbConnection;
-    }
-
-    public DataRetriever(DBConnection dbConnection) {
-        this.dbConnection = dbConnection;
-    }
-
     public DataRetriever() {
         this.dbConnection = new DBConnection();
     }
@@ -98,6 +86,8 @@ public class DataRetriever {
             }
         return products;
     }
+
+
     public List<Product> getProductsByCriteria(String productName,String categoryName,Instant creationMin,Instant creationMax){
         List<Product> products = new ArrayList<>();
         String query = "SELECT DISTINCT Product.id, Product.name, Product.creation_datetime " +
@@ -200,6 +190,7 @@ public class DataRetriever {
 
         return products;
     }
+
 
     public List<Product> getProductsByCriteria2(String productName,String categoryName,Instant creationMin,Instant creationMax,int page , int size){
         List<Product> products = new ArrayList<>();
